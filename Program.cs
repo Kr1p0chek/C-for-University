@@ -51,10 +51,10 @@ internal class Program
 
     public int sumLastNums(int x)
     {
-        int first = x % 10; // Последняя цифра
+        int a = x % 10; // Последняя цифра
         x = x / 10; // число без последней цифры
-        int second = x % 10; // 2-ая с конца цифра
-        return first + second; // вернём сумму
+        int b = x % 10; // 2-ая с конца цифра
+        return a + b; // вернём сумму
     }
     public bool isPositive(int x)
     {
@@ -80,7 +80,7 @@ internal class Program
         Console.WriteLine($" это {a}");
         for (int i = 0; i < 3; i++)
         {
-            Console.Write("Введи следующее слагаемое   ");
+            Console.Write("Введи следующее слагаемое:  ");
             b = int.Parse(Console.ReadLine());
             Console.Write($"{a} + {b}");
             a = a % 10 + b % 10;
