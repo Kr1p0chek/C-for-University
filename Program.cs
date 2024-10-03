@@ -204,13 +204,13 @@ internal class Program
     {
         Random random = new Random();
         int count = 1;
-        int gues = random.Next(0, 10);
+        int guess = random.Next(0, 10);
         int player = -1;
         Console.Write("Введите число от 0 до 9:  ");
         player = int.Parse(Console.ReadLine());
-        if (player != gues)
+        if (player != guess)
         {
-            while (gues != player)
+            while (guess != player)
             {
                 count++;
                 Console.Write("Вы не угадали, введите число от 0 до 9:  ");
