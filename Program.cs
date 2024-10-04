@@ -51,6 +51,7 @@ internal class Program
 
     public int sumLastNums(int x)
     {
+        x = Math.Abs(x);
         int a = x % 10; // Последняя цифра
         x = x / 10; // число без последней цифры
         int b = x % 10; // 2-ая с конца цифра
@@ -75,6 +76,8 @@ internal class Program
 
     public int lastNumSum(int a, int b)
     {
+        a = Math.Abs(a);
+        b = Math.Abs(b);
         Console.Write($"{a} + {b}");
         a = a % 10 + b % 10;
         Console.WriteLine($" это {a}");
@@ -82,6 +85,7 @@ internal class Program
         {
             Console.Write("Введи следующее слагаемое:  ");
             b = int.Parse(Console.ReadLine());
+            b = Math.Abs(b);
             Console.Write($"{a} + {b}");
             a = a % 10 + b % 10;
             Console.WriteLine($" это {a}");
