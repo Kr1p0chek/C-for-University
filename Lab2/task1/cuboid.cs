@@ -8,6 +8,8 @@ namespace Lab2_1_C__
 {
     public class Cuboid : defaultClass
     {
+        public Cuboid() : base() { }
+    
         public Cuboid(int length, int width, int height) : base(length, width, height)
         {
             if (length < 0 || width < 0 || height < 0)
