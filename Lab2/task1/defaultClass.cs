@@ -13,6 +13,14 @@ namespace Lab2_1_C__
         public int X { get { return x; } set { x = value; } }
         public int Y { get { return y; } set { y = value; } }
         public int Z { get { return z; } set { z = value; } }
+
+        public defaultClass()
+        {
+            this.x = 0;
+            this.y = 0;
+            this.z = 0;
+        }
+        
         public defaultClass(int x, int y, int z)
         {
             this.x = x;
