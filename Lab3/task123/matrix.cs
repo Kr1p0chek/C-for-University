@@ -211,17 +211,24 @@ namespace Lab3_taskt123__C__
 
         public override string ToString()
         {
+            int max = 0;
+            for (int i = 0; i < matrix1.GetLength(0); i++)
+            {
+                    for (int j = 0; j < matrix1.GetLength(1); j++)
+                    {
+                        if (matrix1[i, j].ToString().Length > max) max = matrix1[i, j].ToString().Length;
+                    }
+            }
             var result = new System.Text.StringBuilder();
 
             for (int i = 0; i < matrix1.GetLength(0); i++)
             {
                 for (int j = 0; j < matrix1.GetLength(1); j++)
                 {
-                    // Форматируем каждый элемент как четырехзначное число
-                    result.AppendFormat("{0,4}", matrix1[i, j]);
-                    result.Append("  ");
+                    result.AppendFormat($"{{0,{max}}}", matrix1[i, j]);
+                    result.Append(" ");
                 }
-                result.AppendLine(); // Переход на новую строку после каждой строки матрицы
+                result.AppendLine();
             }
 
             return result.ToString();
