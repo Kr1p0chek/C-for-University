@@ -281,10 +281,8 @@ namespace Lab4_C_
             try
             {
                 XmlSerializer serializer = new XmlSerializer(typeof(List<Store>));
-                using (FileStream fs = new FileStream(filePath, FileMode.Create))
-                {
-                    serializer.Serialize(fs, stores);
-                }
+                FileStream fs = new FileStream(filePath, FileMode.Create);
+                serializer.Serialize(fs, stores);
             }
             catch (Exception e) { Console.WriteLine("Ошибка "); throw; }
         }
