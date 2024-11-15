@@ -313,7 +313,10 @@ namespace Lab4_C_
                     string street = parts[1];
                     int fatContent = int.Parse(parts[2]);
                     int price = int.Parse(parts[3]);
-                    if (firm.Length > 20 || street.Length > 20 || !(fatContent == 15 || fatContent == 20 || fatContent == 25) || price < 1) continue;
+                    if (firm.Length > 20 || street.Length > 20 || !(fatContent == 15 || fatContent == 20 || fatContent == 25) || price < 1)
+                    {
+                        Console.WriteLine("Введённые данные не соответствуют условию, последняя строка будет проигнорированна"); continue;
+                    }
                     stores.Add(new Store(firm, street, fatContent, price));
                 }
             }
